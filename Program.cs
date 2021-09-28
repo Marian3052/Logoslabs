@@ -11,11 +11,11 @@ namespace progrme
 
            int sizeInt = sizeof(int);
             
-            Console.WriteLine(" Size of int = " + sizeInt);
+            Console.WriteLine("Size of int = " + sizeInt);
             
             double sizedoble = sizeof(double);
             
-            Console.WriteLine("Size of double = " + sizedoble);
+            Console.WriteLine("size of double = " + sizedoble);
 
             float sizefloat = sizeof(float);
 
