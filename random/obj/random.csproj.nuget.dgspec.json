@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\logoslabs\\calculator 2\\calculator\\calculator 2.csproj": {}
+    "C:\\logoslabs\\random\\random.csproj": {}
   },
   "projects": {
-    "C:\\logoslabs\\calculator 2\\calculator\\calculator 2.csproj": {
+    "C:\\logoslabs\\random\\random.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\logoslabs\\calculator 2\\calculator\\calculator 2.csproj",
-        "projectName": "calculator 2",
-        "projectPath": "C:\\logoslabs\\calculator 2\\calculator\\calculator 2.csproj",
+        "projectUniqueName": "C:\\logoslabs\\random\\random.csproj",
+        "projectName": "random",
+        "projectPath": "C:\\logoslabs\\random\\random.csproj",
         "packagesPath": "C:\\Users\\Адмін\\.nuget\\packages\\",
-        "outputPath": "C:\\logoslabs\\calculator 2\\calculator\\obj\\",
+        "outputPath": "C:\\logoslabs\\random\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

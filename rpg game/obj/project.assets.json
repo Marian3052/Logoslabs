@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\logoslabs\\calculator 2\\calculator\\calculator 2.csproj",
-      "projectName": "calculator 2",
-      "projectPath": "C:\\logoslabs\\calculator 2\\calculator\\calculator 2.csproj",
+      "projectUniqueName": "C:\\logoslabs\\rpg game\\rpg game.csproj",
+      "projectName": "rpg game",
+      "projectPath": "C:\\logoslabs\\rpg game\\rpg game.csproj",
       "packagesPath": "C:\\Users\\Адмін\\.nuget\\packages\\",
-      "outputPath": "C:\\logoslabs\\calculator 2\\calculator\\obj\\",
+      "outputPath": "C:\\logoslabs\\rpg game\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
