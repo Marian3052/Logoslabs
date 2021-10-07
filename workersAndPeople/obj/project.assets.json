@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\logoslabs\\repositories\\random\\random.csproj",
-      "projectName": "random",
-      "projectPath": "C:\\logoslabs\\repositories\\random\\random.csproj",
+      "projectUniqueName": "C:\\logoslabs\\repositories\\workersAndPeople\\workersAndPeople.csproj",
+      "projectName": "workersAndPeople",
+      "projectPath": "C:\\logoslabs\\repositories\\workersAndPeople\\workersAndPeople.csproj",
       "packagesPath": "C:\\Users\\Адмін\\.nuget\\packages\\",
-      "outputPath": "C:\\logoslabs\\repositories\\random\\obj\\",
+      "outputPath": "C:\\logoslabs\\repositories\\workersAndPeople\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
