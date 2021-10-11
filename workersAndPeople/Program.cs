@@ -25,7 +25,7 @@ namespace worker_and_people
         public class Worker : People
         {
             public string position;
-            public Worker(string name, string position) : base(name, "worker")
+            public Worker(string name, string position, string function ) : base(name, "worker")
             {
                 this.position = position;
 
@@ -36,8 +36,9 @@ namespace worker_and_people
                 Console.WriteLine($"{name} position: {position}");
             }
 
-            protected void function()
+            public void function()
             {
+                Console.WriteLine($"{name} function: {function} ");
             }
         }
 
@@ -50,10 +51,11 @@ namespace worker_and_people
 
         static void Main(string[] args)
         {
-            Worker vova = new Worker("Vova","ceo");
+            Worker vova = new Worker("Vova","ceo","strategy developer");
             Guest roma = new Guest("Roman");
             vova.status();
             vova.getPosition();
+            vova.function();
             roma.status();
             Console.ReadKey();
         }
