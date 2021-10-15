@@ -17,9 +17,8 @@ namespace ShopFunctions
             this.ShopItems = new List<ShopItem>()
             {
                 new ShopItem("apple",10.50)
-
             };
-        }
+        }           
         void sell(ShopItem si)
         {
             this.profit += si.clearProfit;
@@ -36,7 +35,8 @@ namespace ShopFunctions
         public void poceed()
         {
 
-             Console.Clear();
+            Console.Clear();
+
             if (Key == ConsoleKey.DownArrow)
             {
                 selection++;
@@ -44,6 +44,14 @@ namespace ShopFunctions
             if (Key == ConsoleKey.UpArrow)
             {
                 selection--;
+            }
+            if (selection <= -1)
+            {
+                selection = 0;
+            }
+            if (selection >= 3)
+            {
+                selection = 2;
             }
             for (int i = 0; i < this.ShopItems.Count; i++)
             {
@@ -64,16 +72,15 @@ namespace ShopFunctions
                 Console.Write(">");
             }
             Console.WriteLine("delete item");
-            
-            if (selection <= -1)
-            {
-               return;
-            }
+            // if (selection <= -1)
+            // {
+            //     return;
+            // }
 
-            if (selection >= 3)
-            {
-                return;
-            }
+            // if (selection >= 3)
+            // {
+            //     return;
+            // }
             Key = Console.ReadKey().Key;
         }
         void info()
