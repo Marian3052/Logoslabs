@@ -13,7 +13,7 @@ namespace ShopFunctions
             
         }
 
-        public string info
+        public string       info
         {
             get
             {
