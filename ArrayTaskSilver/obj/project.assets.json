@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\logoslabs\\repositories\\calculator\\calculator 2.csproj",
-      "projectName": "calculator 2",
-      "projectPath": "C:\\logoslabs\\repositories\\calculator\\calculator 2.csproj",
+      "projectUniqueName": "C:\\logoslabs\\repositories\\ArrayTaskSilver\\ArrayTaskSilver.csproj",
+      "projectName": "ArrayTaskSilver",
+      "projectPath": "C:\\logoslabs\\repositories\\ArrayTaskSilver\\ArrayTaskSilver.csproj",
       "packagesPath": "C:\\Users\\Адмін\\.nuget\\packages\\",
-      "outputPath": "C:\\logoslabs\\repositories\\calculator\\obj\\",
+      "outputPath": "C:\\logoslabs\\repositories\\ArrayTaskSilver\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Адмін\\AppData\\Roaming\\NuGet\\NuGet.Config"

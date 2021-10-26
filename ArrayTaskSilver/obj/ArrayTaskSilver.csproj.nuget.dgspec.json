@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\logoslabs\\repositories\\ArrayTaskBronze\\ArrayTaskBronze.csproj": {}
+    "C:\\logoslabs\\repositories\\ArrayTaskSilver\\ArrayTaskSilver.csproj": {}
   },
   "projects": {
-    "C:\\logoslabs\\repositories\\ArrayTaskBronze\\ArrayTaskBronze.csproj": {
+    "C:\\logoslabs\\repositories\\ArrayTaskSilver\\ArrayTaskSilver.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\logoslabs\\repositories\\ArrayTaskBronze\\ArrayTaskBronze.csproj",
-        "projectName": "ArrayTaskBronze",
-        "projectPath": "C:\\logoslabs\\repositories\\ArrayTaskBronze\\ArrayTaskBronze.csproj",
+        "projectUniqueName": "C:\\logoslabs\\repositories\\ArrayTaskSilver\\ArrayTaskSilver.csproj",
+        "projectName": "ArrayTaskSilver",
+        "projectPath": "C:\\logoslabs\\repositories\\ArrayTaskSilver\\ArrayTaskSilver.csproj",
         "packagesPath": "C:\\Users\\Адмін\\.nuget\\packages\\",
-        "outputPath": "C:\\logoslabs\\repositories\\ArrayTaskBronze\\obj\\",
+        "outputPath": "C:\\logoslabs\\repositories\\ArrayTaskSilver\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Адмін\\AppData\\Roaming\\NuGet\\NuGet.Config"

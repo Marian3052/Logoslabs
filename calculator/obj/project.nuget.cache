@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1ebFcAbk8TWNxnEzx6Q4vkmsX2iLMzw75RtwebbzoW34TelIK2fRWkzL5eBQyubfsg/HBFvPiJGt2UdGYbBZqw==",
+  "dgSpecHash": "n5D5GAjIsT8OVGbN2cUHeETSFWdEO1REqb5dTYGdZdTjpw8LaysQ35gpx3GeNESai114CcOa3IVnIO0Pl2Wn1g==",
   "success": true,
-  "projectFilePath": "C:\\logoslabs\\calculator 2\\calculator\\calculator 2.csproj",
+  "projectFilePath": "C:\\logoslabs\\repositories\\calculator\\calculator 2.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
