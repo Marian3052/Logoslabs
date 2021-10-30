@@ -18,24 +18,34 @@ namespace ShopFunctions
             {
                 new ShopItem("apple",10.50)
             };
-        }           
+        }
         void sell(ShopItem si)
         {
             this.profit += si.clearProfit;
             Console.WriteLine($"{si.name} sold");
         }
-        void add(ShopItem si)
-        {
-            this.ShopItems.Add(si);
-        }
-        void delete(ShopItem si)
-        {
-            this.ShopItems.Remove(si);
-        }
+        // void add(ShopItem si)
+        // {
+        //     this.ShopItems.Add(si);
+        // }
+        // void delete(ShopItem si)
+        // {
+        //     this.ShopItems.Remove(si);
+        // }
         public void poceed()
         {
 
             Console.Clear();
+
+
+            if (Key == ConsoleKey.Enter && selection == 1)
+            {
+                addItem();
+            }
+            if (Key == ConsoleKey.Enter && selection == 2)
+            {
+                deleteItem();
+            }
 
             if (Key == ConsoleKey.DownArrow)
             {
@@ -72,16 +82,39 @@ namespace ShopFunctions
                 Console.Write(">");
             }
             Console.WriteLine("delete item");
-            // if (selection <= -1)
-            // {
-            //     return;
-            // }
 
-            // if (selection >= 3)
-            // {
-            //     return;
-            // }
             Key = Console.ReadKey().Key;
+        }
+
+        void addItem()
+        {
+            // Викликаємоо name
+            Console.Clear();
+            System.Console.WriteLine($"Enter: name");
+            string name = Console.ReadLine();
+            //Викликаємо price
+            System.Console.WriteLine($"Enter: price");
+            double price = Double.Parse(Console.ReadLine());
+
+            //Викликаємо метод який добавляє ShopItem
+            this.ShopItems.Add(new ShopItem(name, price));
+
+
+
+
+        }
+
+        void deleteItem()
+        {
+            Console.Clear();
+        System.Console.WriteLine($"Delete name: ");
+        string name = Console.ReadLine();
+
+        System.Console.WriteLine($"Delete price:  ");
+        double price = Double.Parse(Console.ReadLine());
+
+        this.ShopItems.Remove(new ShopItem(name,price));
+
         }
         void info()
         {
