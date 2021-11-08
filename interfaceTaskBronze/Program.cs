@@ -3,6 +3,9 @@
 namespace interfaceTaskBronze
 {
 
+    
+    
+
     interface ITalk
     {
         void talk();

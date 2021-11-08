@@ -42,7 +42,7 @@ namespace ShopFunctions
             {
                 addItem();
             }
-            if (Key == ConsoleKey.Enter && selection == 2)
+            if (Key == ConsoleKey.Delete && selection == 2)
             {
                 deleteItem();
             }
@@ -107,13 +107,13 @@ namespace ShopFunctions
         void deleteItem()
         {
             Console.Clear();
-        System.Console.WriteLine($"Delete name: ");
-        string name = Console.ReadLine();
+            System.Console.WriteLine($"Delete name: ");
+            string name = Console.ReadLine();
 
-        System.Console.WriteLine($"Delete price:  ");
-        double price = Double.Parse(Console.ReadLine());
+            System.Console.WriteLine($"Delete price:  ");
+            double price = Double.Parse(Console.ReadLine());
 
-        this.ShopItems.Remove(new ShopItem(name,price));
+            this.ShopItems.RemoveAt();
 
         }
         void info()
