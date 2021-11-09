@@ -2,11 +2,11 @@
 
 namespace virtualTaskBronze
 {
-   
+
     class Program
     {
-      
-     public  class Animal
+
+        public class Animal
         {
             public string name;
             private int _step { get; set; }
@@ -26,8 +26,11 @@ namespace virtualTaskBronze
 
 
         }
-    
-        
+        class Puma : Animal
+        {
+
+        }
+
 
         static void Main(string[] args)
         {
