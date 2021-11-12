@@ -12,6 +12,11 @@ namespace ShopFunctions
 
             
         }
+        // foreach (int i in ShopItems)
+        // {
+        //     System.Console.WriteLine(i);
+        // }
+
 
         public string       info
         {

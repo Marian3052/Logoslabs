@@ -6,12 +6,13 @@ namespace ShopFunctions
 {
     class Shop
     {
-        int selection;
+        int selection;  
+        int index;
         string name;
         double profit;
 
         ConsoleKey Key;
-        List<ShopItem> ShopItems;
+        List<ShopItem> ShopItems = new List<ShopItem>() {};
         public Shop()
         {
             this.ShopItems = new List<ShopItem>()
@@ -19,6 +20,7 @@ namespace ShopFunctions
                 new ShopItem("apple",10.50)
             };
         }
+        
         void sell(ShopItem si)
         {
             this.profit += si.clearProfit;
@@ -42,7 +44,7 @@ namespace ShopFunctions
             {
                 addItem();
             }
-            if (Key == ConsoleKey.Delete && selection == 2)
+            if (Key == ConsoleKey.Enter && selection == 2)
             {
                 deleteItem();
             }
@@ -98,22 +100,16 @@ namespace ShopFunctions
 
             //Викликаємо метод який добавляє ShopItem
             this.ShopItems.Add(new ShopItem(name, price));
-
-
-
-
         }
+
 
         void deleteItem()
         {
             Console.Clear();
-            System.Console.WriteLine($"Delete name: ");
-            string name = Console.ReadLine();
+            System.Console.WriteLine("delete item by index: ");
+            int index = Int32.Parse(Console.ReadLine());
 
-            System.Console.WriteLine($"Delete price:  ");
-            double price = Double.Parse(Console.ReadLine());
-
-            this.ShopItems.RemoveAt();
+            this.ShopItems.RemoveAt(index);
 
         }
         void info()
