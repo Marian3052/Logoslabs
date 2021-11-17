@@ -11,6 +11,7 @@ namespace ArrayTaskSilver
             }
             public Student countTop()
             {
+                
                 Student Top = groups[0].countMax();
                 for (int i = 0; i < groups.Length; i++)
                 {
@@ -19,7 +20,15 @@ namespace ArrayTaskSilver
                         Top = groups[i].countMax();
                     }
                 }
+                // foreach (var  i in groups)
+                // {
+                //     if (groups[i].countMax().countAVG() > Top.countAVG())
+                //     {
+                //         Top = groups[i].countMax();
+                //     }
+                // }
                 return Top;
+                
 
             }
             public Student countDummy()

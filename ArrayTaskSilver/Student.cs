@@ -16,20 +16,31 @@ namespace ArrayTaskSilver
             public int countMax()
             {
                 int Max = 0;
-                for (int i = 0; i < point.Length; i++)
+                // for (int i = 0; i < point.Length; i++)
+                // {
+                //     if (this.point[i] > Max)
+                //     {
+                //         Max = this.point[i];
+                //     }
+
+                // }
+                foreach (var i in point)
                 {
                     if (this.point[i] > Max)
                     {
                         Max = this.point[i];
                     }
-
                 }
                 return Max;
             }
             public int countAVG()
             {
                 int AVG = 0;
-                for (int i = 0; i < point.Length; i++)
+                // for (int i = 0; i < point.Length; i++)
+                // {
+                //     AVG += point[i];
+                // }
+                foreach (var i in point)
                 {
                     AVG += point[i];
                 }
@@ -38,7 +49,14 @@ namespace ArrayTaskSilver
             public int countMin()
             {
                 int Min = point[0];
-                for (int i = 0; i > point.Length; i++)
+                // for (int i = 0; i > point.Length; i++)
+                // {
+                //     if (this.point[i] < Min)
+                //     {
+                //         Min = this.point[i];
+                //     }
+                // }
+                foreach (var i in point)
                 {
                     if (this.point[i] < Min)
                     {

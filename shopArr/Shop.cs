@@ -2,25 +2,30 @@
 using System;
 using System.Collections.Generic;
 
+
+
 namespace ShopFunctions
 {
+
     class Shop
     {
-        int selection;  
+        int selection;
         int index;
         string name;
         double profit;
 
         ConsoleKey Key;
-        List<ShopItem> ShopItems = new List<ShopItem>() {};
+        List<ShopItem> ShopItems = new List<ShopItem>() { };
         public Shop()
         {
             this.ShopItems = new List<ShopItem>()
             {
-                new ShopItem("apple",10.50)
+            
+                new ShopItem("apple",10.50),
+                new ShopItem("banana",20.50)
             };
         }
-        
+
         void sell(ShopItem si)
         {
             this.profit += si.clearProfit;
@@ -61,11 +66,11 @@ namespace ShopFunctions
             {
                 selection = 0;
             }
-            if (selection >= 3)
+            if (selection >= 4)
             {
-                selection = 2;
+                selection = 3;
             }
-            for (int i = 0; i < this.ShopItems.Count; i++)
+            for (int i = 1; i < this.ShopItems.Count; i++)
             {
                 Console.WriteLine(this.ShopItems[i].info);
             }
@@ -74,16 +79,24 @@ namespace ShopFunctions
                 Console.Write(">");
             }
             Console.WriteLine("Sell item");
+
             if (selection == 1)
             {
                 Console.Write(">");
             }
             Console.WriteLine("add item");
+
             if (selection == 2)
             {
                 Console.Write(">");
             }
             Console.WriteLine("delete item");
+
+            if (selection == 3)
+            {
+                Console.Write(">");
+            }
+            System.Console.WriteLine("send item");
 
             Key = Console.ReadKey().Key;
         }
@@ -110,6 +123,19 @@ namespace ShopFunctions
             int index = Int32.Parse(Console.ReadLine());
 
             this.ShopItems.RemoveAt(index);
+
+        }
+
+        void sendItem()
+        {
+            Console.Clear();
+            System.Console.WriteLine("send item by index: ");
+            int index = Int32.Parse(Console.ReadLine());
+            
+            
+        }
+        void GetInfo()
+        {
 
         }
         void info()
