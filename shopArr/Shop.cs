@@ -128,9 +128,9 @@ namespace ShopFunctions
 
         void sendItem()
         {
-            Console.Clear();
-            System.Console.WriteLine("send item by index: ");
-            int index = Int32.Parse(Console.ReadLine());
+            // Console.Clear();
+            // System.Console.WriteLine("send item by index: ");
+            // int index = Int32.Parse(Console.ReadLine());
             
             
         }

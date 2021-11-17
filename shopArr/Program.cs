@@ -6,7 +6,7 @@ namespace shopArr
     {
         static void Main(string[] args)
         {
-            ShopItemGroup<ShopItem> group = new ShopItemGroup<ShopItem>();
+            
             Shop shop1 = new Shop();
 
             while (true)

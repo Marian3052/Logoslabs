@@ -16,10 +16,6 @@ namespace ShopFunctions
 
     class ShopItem
     {
-
-
-
-
         public string name;
         public double price;
 
@@ -28,9 +24,6 @@ namespace ShopFunctions
             this.name = name;
             this.price = price;
         }
-
-
-
         public virtual string info
         {
             get
@@ -98,6 +91,7 @@ namespace ShopFunctions
                     sum += ShopItems[i].price;
                 }
                 return sum;
+                
             }
             public void pushShopItem(T ShopItem)
             {
