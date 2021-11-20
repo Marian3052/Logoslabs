@@ -20,9 +20,9 @@ namespace ShopFunctions
         {
             this.ShopItems = new List<ShopItem>()
             {
-            
                 new ShopItem("apple",10.50),
-                new ShopItem("banana",20.50)
+                new ShopItem("banana",20.50),
+                new ShopItem("kiwi",34.10)
             };
         }
 
@@ -53,6 +53,10 @@ namespace ShopFunctions
             {
                 deleteItem();
             }
+            if(Key == ConsoleKey.Enter && selection == 4)
+            {
+                buyOfSum();
+            }
 
             if (Key == ConsoleKey.DownArrow)
             {
@@ -66,9 +70,9 @@ namespace ShopFunctions
             {
                 selection = 0;
             }
-            if (selection >= 4)
+            if (selection >= 5)
             {
-                selection = 3;
+                selection = 4;
             }
             for (int i = 1; i < this.ShopItems.Count; i++)
             {
@@ -98,6 +102,12 @@ namespace ShopFunctions
             }
             System.Console.WriteLine("send item");
 
+            if(selection == 4)
+            {
+                Console.Write(">");
+            }
+            System.Console.WriteLine("Buy of sum");
+
             Key = Console.ReadKey().Key;
         }
 
@@ -126,18 +136,29 @@ namespace ShopFunctions
 
         }
 
-        void sendItem()
+        void buyOfSum()
         {
-            // Console.Clear();
-            // System.Console.WriteLine("send item by index: ");
-            // int index = Int32.Parse(Console.ReadLine());
+            Console.Clear();
+            if (selection >= 1 && selection <= 2)
+            {
+                System.Console.WriteLine("add the first product by index: ");
+                int index = Int32.Parse(Console.ReadLine());
+            }
+             else if (selection >= 1 && selection <= 2)
+            {
+                System.Console.WriteLine("add the second product by index: ");
+                int index = Int32.Parse(Console.ReadLine());
+            }
+           
             
-            
-        }
-        void GetInfo()
-        {
+
+
+
+
+
 
         }
+
         void info()
         {
 

@@ -8,11 +8,12 @@ namespace shopArr
         {
             
             Shop shop1 = new Shop();
-
+            
             while (true)
             {
                  shop1.poceed();
             }
+            
         }
     }
 }

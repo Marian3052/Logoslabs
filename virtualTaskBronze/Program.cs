@@ -5,63 +5,48 @@ namespace virtualTaskBronze
 
     class Program
     {
-
-        public class Puma
+        class People
         {
-            public string name;
-            private int _step { get; set; }
-            public int step => _step  = 4;
+            private string _name {get; set;}
+            public string name => _name;
 
-
-            public Puma(string name = "Puma", int _step = 4) 
+            private int _age {get; set;}
+            public int age => _age;
+            public People(string name, int age)
             {
-                this._step = step;
-                this.name = name;
+                this._age=age;
+                this._name=name;
             }
-
-            
-
-            public virtual void getInfo()
+            public virtual void GetInfo()
             {
-                System.Console.WriteLine($"{name} : {step} meter");
+                System.Console.WriteLine($"Name: {name} - age: {age}");
             }
-
-
-        }
-        class LittlePuma : Puma
-        {
-            public int independent { get; set; }
-
-            public LittlePuma(string name = "little Puma", int _step = 4, int independent = 5) : base(name, _step)
-            {
-                this.name = name;
-                
-                this.independent = independent;
-
-            }
-
-            public void getIndependent()
-            {
-                independent = 5;
-            }
-            public override void getInfo()
-            {
-                System.Console.WriteLine($"{name} :{step / 4} meter | time for independence {independent} days");
-            }
-
-
-
         }
 
+        class Employee : People
+        {
+            private string _company {get; set;}
+            public string company => _company;
 
+            public Employee(string name, int age, string company) : base(name, age)
+            {
+                this._company = company;
+            }
+            public override void GetInfo()
+            {
+                System.Console.WriteLine($"Name: {name} - age: {age} working in the company: {company}");
+            }
+        }
+
+       
         static void Main(string[] args)
         {
-
-            Puma puma = new Puma();
-            puma.getInfo();
-
-            LittlePuma littlePuma = new LittlePuma();
-            littlePuma.getInfo();
+            People people = new People("oleg",18);
+            people.GetInfo();
+            Employee employee = new Employee("Tomas",27,"SoftServe");
+            employee.GetInfo();
+            
+            
 
             Console.ReadKey();
         }

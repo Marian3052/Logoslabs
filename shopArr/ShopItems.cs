@@ -91,7 +91,7 @@ namespace ShopFunctions
                     sum += ShopItems[i].price;
                 }
                 return sum;
-                
+                System.Console.WriteLine($"sum: {sum}");
             }
             public void pushShopItem(T ShopItem)
             {
