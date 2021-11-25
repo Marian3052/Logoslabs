@@ -1,7 +1,7 @@
 
 using System;
 using System.Collections.Generic;
-
+using System.Linq;
 
 
 namespace ShopFunctions
@@ -16,34 +16,23 @@ namespace ShopFunctions
 
         ConsoleKey Key;
         List<ShopItem> ShopItems = new List<ShopItem>() { };
+        List<Fruit> fruits = new List<Fruit>() { };
+        List<Machinery> machineries = new List<Machinery>() { };
         public Shop()
         {
-            this.ShopItems = new List<ShopItem>()
-            {
-                new ShopItem("apple",10.50),
-                new ShopItem("banana",20.50),
-                new ShopItem("kiwi",34.10)
+            this.ShopItems = new List<ShopItem>() {
+                new Machinery("Coffee machine","Samsung",10000,3.7,73.54,30.31),
+                new Fruit("apple",10.50,7),
+                new Fruit("banana",20.50,5),
+                new Fruit("kiwi",34.10,14)
+
             };
         }
-
-        void sell(ShopItem si)
-        {
-            this.profit += si.clearProfit;
-            Console.WriteLine($"{si.name} sold");
-        }
-        // void add(ShopItem si)
-        // {
-        //     this.ShopItems.Add(si);
-        // }
-        // void delete(ShopItem si)
-        // {
-        //     this.ShopItems.Remove(si);
-        // }
         public void poceed()
         {
 
             Console.Clear();
-
+            
 
             if (Key == ConsoleKey.Enter && selection == 1)
             {
@@ -53,10 +42,7 @@ namespace ShopFunctions
             {
                 deleteItem();
             }
-            if(Key == ConsoleKey.Enter && selection == 4)
-            {
-                buyOfSum();
-            }
+
 
             if (Key == ConsoleKey.DownArrow)
             {
@@ -74,10 +60,29 @@ namespace ShopFunctions
             {
                 selection = 4;
             }
-            for (int i = 1; i < this.ShopItems.Count; i++)
+            // -------------
+            for (int i = 0; i < this.ShopItems.Count; i++)
             {
                 Console.WriteLine(this.ShopItems[i].info);
             }
+            for (int i = 0; i < this.fruits.Count; i++)
+            {
+                System.Console.WriteLine(this.fruits[i].info);
+            }
+            for (int i = 0; i < this.machineries.Count; i++)
+            {
+                System.Console.WriteLine(this.machineries[i].info);
+            }
+            // --------------
+            Console.WriteLine("\t\t\tOutstanding fruits");
+
+            // var outstanding = from x in fruits orderby x.daysToGone.StartsWith(0) > 0 select x;
+            // foreach (var f in outstanding)
+            // {
+            //     System.Console.WriteLine(f.info);
+            // }
+            
+
             if (selection == 0)
             {
                 Console.Write(">");
@@ -102,27 +107,48 @@ namespace ShopFunctions
             }
             System.Console.WriteLine("send item");
 
-            if(selection == 4)
-            {
-                Console.Write(">");
-            }
-            System.Console.WriteLine("Buy of sum");
+            
+
+
+
 
             Key = Console.ReadKey().Key;
         }
 
         void addItem()
         {
-            // Викликаємоо name
+
             Console.Clear();
             System.Console.WriteLine($"Enter: name");
             string name = Console.ReadLine();
-            //Викликаємо price
+
             System.Console.WriteLine($"Enter: price");
             double price = Double.Parse(Console.ReadLine());
 
-            //Викликаємо метод який добавляє ShopItem
-            this.ShopItems.Add(new ShopItem(name, price));
+            System.Console.WriteLine($"enter days to gone:");
+            int daysToGone = Int32.Parse(Console.ReadLine());
+
+            System.Console.WriteLine("enter brand: ");
+            string brand = Console.ReadLine();
+
+            System.Console.WriteLine("enter weight: ");
+            double weight = Double.Parse(Console.ReadLine());
+
+            System.Console.WriteLine("enter height: ");
+            double height = Double.Parse(Console.ReadLine());
+
+            System.Console.WriteLine("enter wight: ");
+            double wight = Double.Parse(Console.ReadLine());
+
+            if (daysToGone == 0)
+            {
+                this.ShopItems.Add(new Machinery(name, brand, price, weight, height, wight));
+            }
+            else if (daysToGone >= 0)
+            {
+                this.ShopItems.Add(new Fruit(name, price, daysToGone));
+            };
+
         }
 
 
@@ -132,33 +158,10 @@ namespace ShopFunctions
             System.Console.WriteLine("delete item by index: ");
             int index = Int32.Parse(Console.ReadLine());
 
+
             this.ShopItems.RemoveAt(index);
 
         }
-
-        void buyOfSum()
-        {
-            Console.Clear();
-            if (selection >= 1 && selection <= 2)
-            {
-                System.Console.WriteLine("add the first product by index: ");
-                int index = Int32.Parse(Console.ReadLine());
-            }
-             else if (selection >= 1 && selection <= 2)
-            {
-                System.Console.WriteLine("add the second product by index: ");
-                int index = Int32.Parse(Console.ReadLine());
-            }
-           
-            
-
-
-
-
-
-
-        }
-
         void info()
         {
 

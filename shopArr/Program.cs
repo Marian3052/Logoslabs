@@ -1,5 +1,6 @@
 ﻿using System;
 using ShopFunctions;
+using System.Linq;
 namespace shopArr
 {
     class Program
@@ -8,12 +9,18 @@ namespace shopArr
         {
             
             Shop shop1 = new Shop();
-            
+
+
             while (true)
             {
-                 shop1.poceed();
+                shop1.poceed();
+
             }
             
+            
+
+
+
         }
     }
 }

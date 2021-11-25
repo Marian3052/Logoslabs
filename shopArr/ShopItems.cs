@@ -4,8 +4,10 @@ namespace ShopFunctions
 {
     interface IMachinery
     {
-        static double width { get; }
+        static double weidth { get; }
         static double height { get; }
+        static double wight { get; }
+        string brand { get; }
 
     }
     interface IFood
@@ -14,7 +16,7 @@ namespace ShopFunctions
 
     }
 
-    class ShopItem
+    public class ShopItem
     {
         public string name;
         public double price;
@@ -32,77 +34,55 @@ namespace ShopFunctions
             }
         }
 
-        class Fruit : ShopItem, IFood
+
+
+    }
+    public class Fruit : ShopItem, IFood
+    {
+        private int _daysToGone { get; set; }
+        public int daysToGone => _daysToGone;
+        public override string info
         {
-            private int _daysToGone { get; set; }
-            public int daysToGone => _daysToGone;
-            public override string info
+            get
             {
-                get
-                {
-                    return $"\t\t\t{name} - {price} UAH | gone in {daysToGone} days";
-                }
-            }
-            public Fruit(string name, double price) : base(name, price)
-            {
-                this._daysToGone = daysToGone;
+                return $"\t\t\t{name} - {price} UAH | gone in {daysToGone} days";
             }
         }
-
-        class PC : ShopItem, IMachinery
+        public Fruit(string name, double price, int daysToGone) : base(name, price)
         {
-            private double _width { get; set; }
-            public double wight => _width;
+            this._daysToGone = daysToGone;
+        }
+    }
 
-            private double _height { get; set; }
-            public double height => _height;
+    class Machinery : ShopItem, IMachinery
+    {
+        private double _weidth { get; set; }
+        public double weight => _weidth;
 
-            public override string info
+        private double _height { get; set; }
+        public double height => _height;
+
+        private double _wight { get; set; }
+        public double wight => _wight;
+
+        private string _brand { get; set; }
+        public string brand => _brand;
+
+        public override string info
+        {
+            get
             {
-                get
-                {
-                    return $"\t\t\t{name} - {price} UAH | wight: {wight} cm, height: {height} cm";
-                }
+                return $"\t\t\t{name} '{brand}' - {price} UAH | weight: {weight} kg, height: {height} cm, wight: {wight}";
             }
-            public PC(string name, double price) : base(name, price)
-            {
-                this._height = height;
-                this._width = wight;
-            }
+        }
+        public Machinery(string name, string brand, double price, double weight, double height, double wight) : base(name, price)
+        {
+            this._brand = brand;
+            this._height = height;
+            this._weidth = weight;
+            this._wight = wight;
 
         }
-
-        class ShopItemGroup<T> where T : ShopItem
-        {
-            List<T> ShopItems = new List<T>();
-            public void getShopItemsInfo()
-            {
-                //  не  впевнени (перевірити)!!
-                foreach (var item in ShopItems)
-                {
-                    string info = item.info;
-                }
-            }
-            public double sumShopItemPrice()
-            {
-                double sum = 0;
-                for(var i = 0; i  < ShopItems.Count; i++)
-                {
-                    sum += ShopItems[i].price;
-                }
-                return sum;
-                System.Console.WriteLine($"sum: {sum}");
-            }
-            public void pushShopItem(T ShopItem)
-            {
-                ShopItems.Add(ShopItem);
-            }
-
-        }
-
-
-
-
         public double clearProfit
         {
             get
